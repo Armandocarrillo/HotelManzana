@@ -28,7 +28,21 @@ class AddRegistrationTableViewController: UITableViewController {
         checkOutLabel.text = dateFormatter.string(from: checkOutDatePicker.date)
         
     }
+    //When one date picker is shown, any others collapse
+    let checkInDatePickerCellIndexPath = IndexPath(row: 1, section: 1)
+    let checkOutDatePickerCellIndexPath = IndexPath(row: 3, section: 1)
     
+    var isCheckInDatePickerShown: Bool = false{
+        didSet{
+            checkInDatePicker.isHidden = !isCheckInDatePickerShown
+        }
+    }
+    
+    var isCheckOutDatePickerShown: Bool = false{
+        didSet{
+            checkOutDatePicker.isHidden = !isCheckOutDatePickerShown
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +55,26 @@ class AddRegistrationTableViewController: UITableViewController {
         checkOutDatePicker.minimumDate = checkInDatePicker.date.addingTimeInterval(86400)//seconds = 24h
     
     }
-
-  
-
     
-    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch (indexPath.section, indexPath.row) {
+        case (checkInDatePickerCellIndexPath.section, checkInDatePickerCellIndexPath.row):
+            if isCheckInDatePickerShown{
+                return 216.0
+            } else {
+                return 0.0
+            }
+        case (checkOutDatePickerCellIndexPath.section,checkOutDatePickerCellIndexPath.row):
+            if isCheckOutDatePickerShown {
+                return 216.0
+            } else {
+                return 0.0
+            }
+        default:
+            return 44.0
+        }
+    }
 
-    
     @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
         let firstName = firstNameTextField.text ?? ""
         let lastName = lastNameTextField.text ?? ""

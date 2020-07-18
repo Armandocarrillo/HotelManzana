@@ -97,8 +97,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nov 23, 2020" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBC-jS-yYt">
-                                                    <rect key="frame" x="310" y="0.0" width="104" height="44.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nov 23, 2020" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBC-jS-yYt">
+                                                    <rect key="frame" x="304" y="-1" width="104" height="44.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -107,10 +107,10 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="nBC-jS-yYt" secondAttribute="bottom" constant="-0.5" id="8TC-uZ-PYx"/>
                                                 <constraint firstItem="9Um-bj-Ahc" firstAttribute="top" secondItem="cTT-XX-m5v" secondAttribute="top" id="Bhw-pS-dw6"/>
-                                                <constraint firstItem="nBC-jS-yYt" firstAttribute="top" secondItem="cTT-XX-m5v" secondAttribute="top" id="Ls5-yw-MLU"/>
-                                                <constraint firstItem="nBC-jS-yYt" firstAttribute="leading" secondItem="9Um-bj-Ahc" secondAttribute="trailing" constant="194" id="fQm-AL-kBa"/>
+                                                <constraint firstItem="nBC-jS-yYt" firstAttribute="top" secondItem="cTT-XX-m5v" secondAttribute="top" constant="-1" id="Ls5-yw-MLU"/>
+                                                <constraint firstItem="nBC-jS-yYt" firstAttribute="leading" secondItem="9Um-bj-Ahc" secondAttribute="trailing" constant="188" id="fQm-AL-kBa"/>
                                                 <constraint firstItem="9Um-bj-Ahc" firstAttribute="leading" secondItem="cTT-XX-m5v" secondAttribute="leading" constant="6" id="hyp-vL-J5P"/>
-                                                <constraint firstAttribute="trailing" secondItem="nBC-jS-yYt" secondAttribute="trailing" id="yCe-Ma-pfl"/>
+                                                <constraint firstAttribute="trailing" secondItem="nBC-jS-yYt" secondAttribute="trailing" constant="6" id="yCe-Ma-pfl"/>
                                                 <constraint firstAttribute="bottom" secondItem="9Um-bj-Ahc" secondAttribute="bottom" constant="-0.5" id="ySU-1G-dJP"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -143,26 +143,26 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check-Out Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGH-zs-4UL">
-                                                    <rect key="frame" x="11" y="-1" width="124.5" height="47.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nov 23, 2020" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUG-u2-hik">
+                                                    <rect key="frame" x="310" y="0.0" width="104" height="44.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nov 23, 2020" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUG-u2-hik">
-                                                    <rect key="frame" x="310" y="-1" width="104" height="47"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check-Out Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGH-zs-4UL">
+                                                    <rect key="frame" x="5" y="-1" width="124.5" height="47.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="IUG-u2-hik" secondAttribute="bottom" constant="-2" id="EAU-s3-ula"/>
+                                                <constraint firstAttribute="bottom" secondItem="IUG-u2-hik" secondAttribute="bottom" constant="-1" id="EAU-s3-ula"/>
                                                 <constraint firstAttribute="trailing" secondItem="IUG-u2-hik" secondAttribute="trailing" id="Pp3-i7-sD7"/>
-                                                <constraint firstItem="lGH-zs-4UL" firstAttribute="leading" secondItem="8oI-tZ-2A5" secondAttribute="leading" constant="11" id="eQZ-Jc-9JH"/>
-                                                <constraint firstItem="IUG-u2-hik" firstAttribute="top" secondItem="8oI-tZ-2A5" secondAttribute="top" constant="-1" id="edP-O6-cwt"/>
+                                                <constraint firstItem="lGH-zs-4UL" firstAttribute="leading" secondItem="8oI-tZ-2A5" secondAttribute="leading" constant="5" id="eQZ-Jc-9JH"/>
+                                                <constraint firstItem="IUG-u2-hik" firstAttribute="top" secondItem="8oI-tZ-2A5" secondAttribute="top" id="edP-O6-cwt"/>
                                                 <constraint firstAttribute="bottom" secondItem="lGH-zs-4UL" secondAttribute="bottom" constant="-2.5" id="i8I-J5-YYD"/>
-                                                <constraint firstItem="IUG-u2-hik" firstAttribute="leading" secondItem="lGH-zs-4UL" secondAttribute="trailing" constant="174.5" id="n6G-OE-31L"/>
+                                                <constraint firstItem="IUG-u2-hik" firstAttribute="leading" secondItem="lGH-zs-4UL" secondAttribute="trailing" constant="180.5" id="n6G-OE-31L"/>
                                                 <constraint firstItem="lGH-zs-4UL" firstAttribute="top" secondItem="8oI-tZ-2A5" secondAttribute="top" constant="-1" id="qPG-Ky-e7R"/>
                                             </constraints>
                                         </tableViewCellContentView>

@@ -14,6 +14,7 @@
 		1034658024C264C000410065 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1034657E24C264C000410065 /* LaunchScreen.storyboard */; };
 		1034658824C2671B00410065 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1034658724C2671B00410065 /* Registration.swift */; };
 		1034658A24C2672900410065 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1034658924C2672900410065 /* Room.swift */; };
+		10ED752824C2752D0096DCE3 /* AddRegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ED752724C2752D0096DCE3 /* AddRegistrationTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1034658124C264C000410065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1034658724C2671B00410065 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		1034658924C2672900410065 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		10ED752724C2752D0096DCE3 /* AddRegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegistrationTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				1034657324C264BF00410065 /* AppDelegate.swift */,
 				1034657524C264BF00410065 /* SceneDelegate.swift */,
+				10ED752724C2752D0096DCE3 /* AddRegistrationTableViewController.swift */,
 				1034657924C264BF00410065 /* Main.storyboard */,
 				1034657C24C264C000410065 /* Assets.xcassets */,
 				1034657E24C264C000410065 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1034657424C264BF00410065 /* AppDelegate.swift in Sources */,
+				10ED752824C2752D0096DCE3 /* AddRegistrationTableViewController.swift in Sources */,
 				1034658824C2671B00410065 /* Registration.swift in Sources */,
 				1034658A24C2672900410065 /* Room.swift in Sources */,
 				1034657624C264BF00410065 /* SceneDelegate.swift in Sources */,

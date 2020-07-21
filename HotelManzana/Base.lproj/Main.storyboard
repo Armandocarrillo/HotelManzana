@@ -217,7 +217,7 @@
                                                         <action selector="stepperValueChanged:" destination="LtA-ob-Rff" eventType="valueChanged" id="yY4-EJ-1uq"/>
                                                     </connections>
                                                 </stepper>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHJ-Be-4wm">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHJ-Be-4wm">
                                                     <rect key="frame" x="282" y="10" width="10" height="23"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -228,7 +228,6 @@
                                                 <constraint firstItem="fHJ-Be-4wm" firstAttribute="top" secondItem="R8C-Cb-Xdd" secondAttribute="top" constant="10" id="CBH-4T-Ti0"/>
                                                 <constraint firstItem="eVd-WN-Lz5" firstAttribute="leading" secondItem="fHJ-Be-4wm" secondAttribute="trailing" constant="19" id="RVd-wm-gxc"/>
                                                 <constraint firstAttribute="bottom" secondItem="eVd-WN-Lz5" secondAttribute="bottom" constant="6.5" id="Tfn-Vo-DL9"/>
-                                                <constraint firstItem="fHJ-Be-4wm" firstAttribute="leading" secondItem="2VN-St-x0j" secondAttribute="trailing" constant="221.5" id="ikR-tN-S9F"/>
                                                 <constraint firstAttribute="bottom" secondItem="2VN-St-x0j" secondAttribute="bottom" constant="10" id="kPA-1t-cem"/>
                                                 <constraint firstItem="eVd-WN-Lz5" firstAttribute="top" secondItem="R8C-Cb-Xdd" secondAttribute="top" constant="5" id="mcC-Se-Ltd"/>
                                                 <constraint firstAttribute="bottom" secondItem="fHJ-Be-4wm" secondAttribute="bottom" constant="11" id="oRJ-N2-2Nz"/>
@@ -245,7 +244,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mz-Vu-rYO">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mz-Vu-rYO">
                                                     <rect key="frame" x="282" y="10" width="10" height="23"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -265,13 +264,13 @@
                                                 </stepper>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="7mz-Vu-rYO" firstAttribute="leading" secondItem="8SU-g6-zhE" secondAttribute="trailing" constant="206" id="0nD-6q-0DX"/>
                                                 <constraint firstItem="8SU-g6-zhE" firstAttribute="top" secondItem="zRp-NW-pdo" secondAttribute="top" constant="11" id="7XY-yw-kZ5"/>
                                                 <constraint firstItem="8SU-g6-zhE" firstAttribute="leading" secondItem="zRp-NW-pdo" secondAttribute="leading" constant="12" id="CG4-3Z-Crg"/>
                                                 <constraint firstItem="7mz-Vu-rYO" firstAttribute="top" secondItem="zRp-NW-pdo" secondAttribute="top" constant="10" id="GfB-ov-w7m"/>
                                                 <constraint firstAttribute="bottom" secondItem="7mz-Vu-rYO" secondAttribute="bottom" constant="11" id="IGf-vw-vRU"/>
                                                 <constraint firstItem="hWn-jV-hvH" firstAttribute="leading" secondItem="7mz-Vu-rYO" secondAttribute="trailing" constant="19" id="IxS-5c-5ka"/>
                                                 <constraint firstAttribute="trailing" secondItem="hWn-jV-hvH" secondAttribute="trailing" constant="9" id="Jg1-lD-b0B"/>
-                                                <constraint firstItem="7mz-Vu-rYO" firstAttribute="leading" secondItem="8SU-g6-zhE" secondAttribute="trailing" constant="206" id="Sl5-VG-AbH"/>
                                                 <constraint firstItem="hWn-jV-hvH" firstAttribute="top" secondItem="zRp-NW-pdo" secondAttribute="top" constant="5" id="h3K-MR-GDG"/>
                                                 <constraint firstAttribute="bottom" secondItem="8SU-g6-zhE" secondAttribute="bottom" constant="10" id="kE9-mb-J9p"/>
                                                 <constraint firstAttribute="bottom" secondItem="hWn-jV-hvH" secondAttribute="bottom" constant="6.5" id="kKv-4Q-X7H"/>
@@ -288,6 +287,38 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p3D-Wv-VTC" id="Wbe-Pg-J84">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wi-Fi (per day)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6K-wZ-zPh">
+                                                    <rect key="frame" x="10" y="11" width="115" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="llF-e6-cOe">
+                                                    <rect key="frame" x="358" y="6" width="51" height="31.5"/>
+                                                    <connections>
+                                                        <action selector="wifiSwitchChanged:" destination="LtA-ob-Rff" eventType="valueChanged" id="pNC-mx-fCp"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtb-eW-nmg">
+                                                    <rect key="frame" x="308" y="11" width="29" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="t6K-wZ-zPh" firstAttribute="leading" secondItem="Wbe-Pg-J84" secondAttribute="leading" constant="10" id="4jN-yN-Brc"/>
+                                                <constraint firstAttribute="trailing" secondItem="llF-e6-cOe" secondAttribute="trailing" constant="7" id="ANn-W8-4UY"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="dtb-eW-nmg" secondAttribute="bottom" constant="0.5" id="Ce3-1Y-eH6"/>
+                                                <constraint firstItem="t6K-wZ-zPh" firstAttribute="top" secondItem="Wbe-Pg-J84" secondAttribute="top" constant="11" id="HYP-D5-dIJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="t6K-wZ-zPh" secondAttribute="bottom" constant="11.5" id="Ksx-Y5-meg"/>
+                                                <constraint firstItem="dtb-eW-nmg" firstAttribute="top" secondItem="Wbe-Pg-J84" secondAttribute="topMargin" id="NIH-dn-aEo"/>
+                                                <constraint firstItem="llF-e6-cOe" firstAttribute="leading" secondItem="dtb-eW-nmg" secondAttribute="trailing" constant="21" id="TyU-JK-69C"/>
+                                                <constraint firstItem="dtb-eW-nmg" firstAttribute="leading" secondItem="t6K-wZ-zPh" secondAttribute="trailing" constant="183" id="W7y-TI-6CI"/>
+                                                <constraint firstAttribute="bottom" secondItem="llF-e6-cOe" secondAttribute="bottom" constant="6.5" id="fRX-I8-0Gy"/>
+                                                <constraint firstItem="llF-e6-cOe" firstAttribute="top" secondItem="Wbe-Pg-J84" secondAttribute="top" constant="6" id="jQn-Cq-QX0"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -329,6 +360,7 @@
                         <outlet property="numberOfAdultsStepper" destination="eVd-WN-Lz5" id="5VD-Xk-2Vi"/>
                         <outlet property="numberOfChildrenLabel" destination="7mz-Vu-rYO" id="J7y-NQ-TwG"/>
                         <outlet property="numberOfChildrenStepper" destination="hWn-jV-hvH" id="XuN-qm-EBt"/>
+                        <outlet property="wifiSwitch" destination="llF-e6-cOe" id="wZK-x8-oM1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TfE-7Z-nmr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -154,5 +154,6 @@ class AddRegistrationTableViewController: UITableViewController {
     @IBAction func wifiSwitchChanged(_ sender: UISwitch) {
     }
     
+   
     
 }

@@ -38,8 +38,21 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
     @IBOutlet weak var wifiSwitch: UISwitch!
     //room type
     @IBOutlet weak var roomTypeLabel: UILabel!
-    
-    
+    // create a model object instance
+    var registration: Registration?{
+        guard let roomType = roomType else {return nil}
+        
+        let firstName = firstNameTextField.text ?? ""
+        let lastName = lastNameTextField.text ?? ""
+        let email = emailTextField.text ?? ""
+        let checkInDate = checkInDatePicker.date
+        let checkOutDate = checkOutDatePicker.date
+        let numberOfAdults = Int( numberOfAdultsStepper.value)
+        let numberOfChildren = Int(numberOfChildrenStepper.value)
+        let hasWifi = wifiSwitch.isOn
+        
+        return Registration(firstName: firstName, lastName: lastName, emailAddress: email, checkInDate: checkInDate, checkOutDate: checkOutDate, numberOfAdults: numberOfAdults, numberOfChildren: numberOfChildren, roomType: roomType, wifi: hasWifi)
+    }
     
     
     func updateRoomType(){
@@ -143,7 +156,7 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
             break
         }
     }
-
+/*
     @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
         let firstName = firstNameTextField.text ?? ""
         let lastName = lastNameTextField.text ?? ""
@@ -167,7 +180,7 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
         print("Wifi: \(hasWifi)")
         print("Room Type: \(roomChoice)")
     }
-    
+    */
     @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
         updateDateViews()
     }
@@ -176,6 +189,10 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
         updateNumberOfGuests()
     }
     @IBAction func wifiSwitchChanged(_ sender: UISwitch) {
+    }
+    
+    @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

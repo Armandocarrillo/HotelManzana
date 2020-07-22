@@ -8,9 +8,13 @@
 
 import UIKit
 
+protocol SelectRoomTypeTableViewControllerDelegate {
+    func didSelect(roomType : RoomType)
+    }
+
 class SelectRoomTypeTableViewController: UITableViewController {
     
-   
+    var delegate: SelectRoomTypeTableViewControllerDelegate?
     var roomType: RoomType?
 
     override func viewDidLoad() {
@@ -43,9 +47,23 @@ class SelectRoomTypeTableViewController: UITableViewController {
         
         cell.textLabel?.text = roomType.name
         cell.detailTextLabel?.text = " $ \(roomType.price)"
+        
+        if roomType == self.roomType {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
 
     
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        roomType = RoomType.all[ indexPath.row]
+        delegate?.didSelect(roomType: roomType!)
+        tableView.reloadData()
+        
     }
     
     /*

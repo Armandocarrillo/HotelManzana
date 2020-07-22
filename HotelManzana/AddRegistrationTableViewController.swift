@@ -8,7 +8,16 @@
 
 import UIKit
 
-class AddRegistrationTableViewController: UITableViewController {
+class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeTableViewControllerDelegate {
+    
+    var roomType: RoomType?
+    
+    func didSelect(roomType: RoomType) {
+        self.roomType = roomType
+        updateRoomType()
+        
+    }
+    
     //client
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -27,8 +36,19 @@ class AddRegistrationTableViewController: UITableViewController {
     @IBOutlet weak var numberOfChildrenStepper: UIStepper!
     //wifi per day
     @IBOutlet weak var wifiSwitch: UISwitch!
+    //room type
+    @IBOutlet weak var roomTypeLabel: UILabel!
     
     
+    
+    
+    func updateRoomType(){
+        if let roomType = roomType {
+            roomTypeLabel.text = roomType.name
+        }else {
+            roomTypeLabel.text = "Not Set"
+        }
+    }
     
     func updateDateViews(){
         let dateFormatter = DateFormatter()
@@ -68,6 +88,7 @@ class AddRegistrationTableViewController: UITableViewController {
         checkOutDatePicker.minimumDate = checkInDatePicker.date.addingTimeInterval(86400)//seconds = 24h
     
         updateNumberOfGuests()
+        updateRoomType()
     }
     //default value is false
     //user need to tap the date label to show picker date
@@ -132,6 +153,8 @@ class AddRegistrationTableViewController: UITableViewController {
         let numberOfAdults = Int(numberOfAdultsStepper.value)
         let numberOfChildren = Int(numberOfChildrenStepper.value)
         let hasWifi = wifiSwitch.isOn
+        let roomChoice = roomType?.name ?? " Not Set"
+        
         
         print("DONE TAPPED")
         print("FirstName: \(firstName)")
@@ -142,6 +165,7 @@ class AddRegistrationTableViewController: UITableViewController {
         print("Number Of Adults: \(numberOfAdults)")
         print("Number Of Childre: \(numberOfChildren)")
         print("Wifi: \(hasWifi)")
+        print("Room Type: \(roomChoice)")
     }
     
     @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
@@ -154,6 +178,13 @@ class AddRegistrationTableViewController: UITableViewController {
     @IBAction func wifiSwitchChanged(_ sender: UISwitch) {
     }
     
-   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SelectRoomType"{
+            let destinationViewController = segue.destination as? SelectRoomTypeTableViewController
+            destinationViewController?.delegate = self
+            destinationViewController?.roomType = roomType
+            
+        }
+    }
     
 }
